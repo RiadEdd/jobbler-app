@@ -1,0 +1,84 @@
+@import "../palette.scss";
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  li {
+    cursor: pointer;
+  }
+}
+
+.side-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: $menu-gradient;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li {
+      padding: 0.8em 2em 0.8em 2em;
+    }
+  }
+}
+.icon {
+  display: inline-block;
+  margin-right: 12px;
+  width: 25px;
+  height: 25px;
+}
+
+.width-menu {
+  width: 20vw;
+  transition: all 0.3s ease-out;
+  .footer-menu {
+    width: 100%;
+    .toggle-menu {
+      width: 100%;
+      padding: 10px 0px 10px 0px !important;
+      text-align: right;
+      fa-icon {
+        margin-right: 2em;
+      }
+    }
+  }
+}
+
+.min-width-menu {
+  width: 5vw;
+  transition: all 0.3s ease-in;
+  li {
+    fa-icon {
+      margin: 0;
+    }
+  }
+}
+
+.toggle-menu {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.toggle-menu:hover {
+  opacity: 1;
+}

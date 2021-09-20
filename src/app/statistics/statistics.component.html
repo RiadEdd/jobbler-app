@@ -1,0 +1,24 @@
+<div class="statistics-wrapper">
+  <app-navbar></app-navbar>
+  <div class="statistics-no-menu">
+    <div class="main-stats">
+      <div class="metrics">
+        <div class="metric-card">
+          <span class="card-title"># Offers</span>
+          <span class="card-number">{{ totalOffers() }}</span>
+        </div>
+        <div class="metric-card">
+          <span class="card-title"># Rejections</span>
+          <span class="card-number">{{ totalRejections() }}</span>
+        </div>
+        <div class="metric-card">
+          <span class="card-title"># Total Applications</span>
+          <span class="card-number">{{ totalApplications() }}</span>
+        </div>
+      </div>
+      <div class="main-chart">
+        <canvas id="allJobsChart"> </canvas>
+      </div>
+    </div>
+  </div>
+</div>

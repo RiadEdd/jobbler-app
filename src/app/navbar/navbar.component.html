@@ -1,0 +1,24 @@
+<div
+  class="side-navbar"
+  [ngClass]="toggleMinMenu ? 'min-width-menu' : 'width-menu'"
+>
+  <h1>Jobbler</h1>
+  <ul>
+    <li *ngFor="let navItem of nav" [routerLink]="[navItem.link]">
+      <fa-icon [icon]="navItem.icon" size="lg" class="icon"></fa-icon>
+      <a *ngIf="!toggleMinMenu">{{ navItem.title }}</a>
+    </li>
+  </ul>
+  <ul class="footer-menu">
+    <li [routerLink]="['/login']">
+      <fa-icon [icon]="faSignOutAlt" size="lg" class="icon"></fa-icon>
+      <a *ngIf="!toggleMinMenu">Log Out</a>
+    </li>
+    <li (click)="toggleMenuWidth()" class="toggle-menu">
+      <fa-icon
+        [icon]="toggleMinMenu ? faAngleDoubleRight : faAngleDoubleLeft"
+        size="2x"
+      ></fa-icon>
+    </li>
+  </ul>
+</div>

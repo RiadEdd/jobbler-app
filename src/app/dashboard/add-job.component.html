@@ -1,0 +1,50 @@
+<div class="window-wrapper">
+  <div class="modal-wrapper">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Add a new application</h3>
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          (click)="activeModal.dismiss('Cross click')"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #jobApplicationForm="ngForm">
+          <div class="formField">
+            <label for="companyName">Company Name</label>
+            <input type="text" name="companyName" ngModel autocomplete="off" />
+          </div>
+          <div class="formField">
+            <label for="jobTitle">Job Title</label>
+            <input type="text" name="jobTitle" ngModel autocomplete="off" />
+          </div>
+          <div class="formField">
+            <label for="jobDescription">Job Description</label>
+            <textarea
+              name="jobDescription"
+              ngModel
+              class="jobDescription"
+            ></textarea>
+          </div>
+          <div class="formField">
+            <label for="technologies">Technologies</label>
+            <input type="text" name="technologies" ngModel autocomplete="off" />
+          </div>
+          <div class="formField">
+            <label for="salary">Salary (€)</label>
+            <input type="number" name="salary" ngModel autocomplete="off" />
+          </div>
+          <div class="add-button">
+            <button (click)="createJobApplication(jobApplicationForm.value)">
+              Add
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

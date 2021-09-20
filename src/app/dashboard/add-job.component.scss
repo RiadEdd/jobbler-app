@@ -1,0 +1,78 @@
+@import "../palette.scss";
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.window-wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  .modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .modal {
+      width: 20vw;
+      height: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  button:focus {
+    outline: none;
+  }
+}
+
+.formField {
+  label {
+    margin-right: 5px;
+  }
+  input {
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-bottom: 1.2rem;
+  .jobDescription {
+    padding: 0 0 100px 0;
+    resize: none;
+  }
+}
+
+.add-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 100px;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    background: $menu-gradient;
+    color: white;
+    border-radius: 6px;
+  }
+}
