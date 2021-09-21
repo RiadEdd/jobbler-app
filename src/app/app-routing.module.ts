@@ -17,6 +17,11 @@ const routes: Routes = [
     path: 'statistics',
     component: StatisticsComponent,
   },
+  {
+    path: '',
+    pathMatch: 'prefix',
+    redirectTo: 'login',
+  }
 ];
 
 @NgModule({
