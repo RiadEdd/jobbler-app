@@ -3,6 +3,7 @@
   <div class="login-space">
     <div class="title">
       <h2>Welcome back !</h2>
+      <p style="font-style: italic; font-size: 0.7rem; opacity: 0.5;">No authentication for now, access the website by clicking on "Sign In" directly.</p>
     </div>
     <form action="">
       <label for="">Email Address</label>
@@ -13,7 +14,7 @@
         placeholder="Enter your password"
         class="login-input"
       />
-      <input type="submit" value="Sign In" class="login-button" />
+      <input [routerLink]="['/dashboard']" type="submit" value="Sign In" class="login-button" />
     </form>
   </div>
 </div>
