@@ -15,7 +15,7 @@ export class JobsService {
     private webReqService: WebRequestService,
     private http: HttpClient
   ) {
-    this.ROOT_URL = 'http://localhost:3000';
+    this.ROOT_URL = 'https://jobbler-api.herokuapp.com';
   }
 
   createJob(job: Job) {
